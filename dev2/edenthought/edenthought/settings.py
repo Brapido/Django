@@ -20,7 +20,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['dev2-9qf6.onrender.com']
 
 # CSRF_TRUSTED_ORIGINS = []
 
