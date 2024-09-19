@@ -1,0 +1,12 @@
+p {
+    width: min-content;
+    height: min-content;
+    padding: 20px;
+    border: 1px solid;
+}
+
+/*Presentational styles */
+body {
+    font-family: sans-serif;
+    padding: 2em;
+}

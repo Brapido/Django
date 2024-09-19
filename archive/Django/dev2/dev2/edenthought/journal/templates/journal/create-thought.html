@@ -1,0 +1,42 @@
+{% extends 'journal/navbar.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+    <br>
+    
+    <div class="container bg-white shadow-md p-5 form-layout">
+   
+        <h1> Create a Thought </h1>
+        
+        <br>
+
+        <p> You may create your thought here: </p>
+
+        <form method="POST" autocomplete="off">
+
+            {% csrf_token %}
+            
+            <!-- To avoide extra calls to CreateThoughForm here set forms.py
+             field to be specific instead of '__all__'-->
+
+            {{CreateThoughtForm|crispy}}
+
+            <br>
+
+            <button class="btn btn-outline-primary btn-md w-100 btn-block p-3" type="submit"> <i class="fa fa-plus" aria-hidden="true"></i> &nbsp; Create Thought </button>
+
+
+        </form>
+        
+
+    </div>
+    
+    <br>
+
+{% endblock %}
+
+
+
+
+
