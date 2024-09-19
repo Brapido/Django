@@ -1,0 +1,7 @@
+Need to install ttkbootstrap from CMD:
+    Windows: pip install tkkbootstrap
+    MacOS: pip3install tkkbootstrap
+
+Lambda - Look up 
+
+Left off at 1 40 39
