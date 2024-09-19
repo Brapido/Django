@@ -1,0 +1,72 @@
+{% extends 'journal/navbar.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+    <br>
+    
+    <div class="container bg-white shadow-md p-5 form-layout">
+   
+        <h1> Update username and email </h1>
+
+        <p> You may change your username and email here:</p>
+
+        <form method="POST" autocomplete="off">
+
+            {% csrf_token %}
+            
+            {{UserUpdateForm|crispy}}
+
+            <br>
+
+            <button class="btn btn-outline-primary btn-md w-100 btn-block p-3"type="submit"> <i class="fa fa-wrench" aria-hidden="true"></i> &nbsp; Update </button>
+
+        </form>
+        
+    </div>
+    
+    <br>
+
+    <div class="container bg-white shadow-md p-5 form-layout">
+   
+        <h1> Update Profile Picture </h1>
+
+        <p> You may change your profile picture below:</p>
+
+        <form method="POST" autocomplete="off" enctype="multipart/form-data">
+
+            {% csrf_token %}
+            
+            {{ProfileUpdateForm|crispy}}
+
+            <br>
+
+            <button class="btn btn-outline-primary btn-md w-100 btn-block p-3"type="submit"> <i class="fa fa-upload" aria-hidden="true"></i> &nbsp; Upload </button>
+
+        </form>
+        
+    </div>
+    
+    <br>
+
+    <div class="container bg-white shadow-md p-5 form-layout">
+
+        
+        <h1> Delete your account? </h1>
+
+        <p> If you would like to close your account, please proceed below:</p>
+
+        <a class="nav-link"  href="{% url 'delete-account' %}"> <i class="fa fa-trash" aria-hidden="true"></i> &nbsp; Proceed to delete your account </a>
+    
+
+
+    </div>
+
+    <br>
+
+{% endblock %}
+
+
+
+
+
