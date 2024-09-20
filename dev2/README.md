@@ -59,6 +59,3 @@ The Thought Storage App is a Django-based web application designed to help users
 - **Edit Thought:** Update an existing thought.
 - **Delete Thought:** Remove a thought from your list.
 
-
-## Contact
-For any questions or suggestions, please contact your-email@example.com.
