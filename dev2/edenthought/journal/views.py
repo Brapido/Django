@@ -34,7 +34,7 @@ def register(request):
             
             # comment to toggle email send feature
             # subject, message, from, to
-            send_mail("Welcome to Edenthought", "Congratulations on creating your account", settings.DEFAULT_FROM_EMAIL, [current_user.email])
+            # send_mail("Welcome to Edenthought", "Congratulations on creating your account", settings.DEFAULT_FROM_EMAIL, [current_user.email])
 
             profile = Profile.objects.create(user=current_user)
             messages.success(request, "User created!")
