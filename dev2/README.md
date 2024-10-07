@@ -9,48 +9,11 @@ The Thought Storage App is a Django-based web application designed to help users
 - List all thoughts
 - Responsive design for mobile and desktop
 
-## Installation
-
 ### Prerequisites
 - Python 3.8+
 - Django 3.2+
 - pip (Python package installer)
 
-### Steps
-1. **Clone the repository:**
-    ```bash
-    git clone https://github.com/yourusername/thought-storage-app.git
-    cd thought-storage-app
-    ```
-
-2. **Create a virtual environment:**
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-    ```
-
-3. **Install dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4. **Apply migrations:**
-    ```bash
-    python manage.py migrate
-    ```
-
-5. **Create a superuser:**
-    ```bash
-    python manage.py createsuperuser
-    ```
-
-6. **Run the development server:**
-    ```bash
-    python manage.py runserver
-    ```
-
-7. **Access the app:**
-    Open your web browser and go to `http://127.0.0.1:8000`.
 
 ## Usage
 - **Sign Up:** Create a new account to start storing your thoughts.
