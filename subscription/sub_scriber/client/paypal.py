@@ -35,12 +35,12 @@ def update_subscription_paypal(access_token, subID):
     }
 
     # obtain current subscription plan for the user
-    subDetails = Subscription.objects.get(paypal_subscirption_id=subID)
+    subDetails = Subscription.objects.get(paypal_subscription_id=subID)
     current_sub_plan = subDetails.subscription_plan
     if current_sub_plan == "Standard":
-        new_sub_plan_id= 'P-4HF936665H352344KM35OBIY' # To Premium
+        new_sub_plan_id= 'P-9NH796962B362113CM4C47UI' # To Premium
     elif current_sub_plan == "Premium":
-        new_sub_plan_id = 'P-2RU37377SR376025BM35NZGQ' # To Standard
+        new_sub_plan_id = 'P-6B3737358P965530NM4C46SA' # To Standard
 
     url = 'https://api.sandbox.paypal.com/v1/billing/subscriptions/' + subID + '/revise'
 
@@ -57,7 +57,7 @@ def update_subscription_paypal(access_token, subID):
 
     # loop through response data from Paypal to grab HATEOAS approval link
     for link in response_data.get('links', []):
-        if link.get('rel') == 'apporve':
+        if link.get('rel') == 'approve':
             approve_link = link['href']
 
     # checking that original POST request was valid
@@ -88,7 +88,7 @@ def get_current_subscription(access_token, subID):
     
     
 
-    
+
     
     
 

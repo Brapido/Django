@@ -133,11 +133,11 @@ def django_update_sub_confirmed(request, subID):
     access_token = get_access_token()
     current_plan_id = get_current_subscription(access_token, subID)
 
-    if current_plan_id == 'P-2RU37377SR376025BM35NZGQ':
+    if current_plan_id == 'P-6B3737358P965530NM4C46SA': # Standard
         new_plan_name = 'Standard'
         new_cost = "4.99"
         Subscription.objects.filter(paypal_subscription_id=subID).update(subscription_plan=new_plan_name, subscription_cost=new_cost)
-    elif current_plan_id == ' P-4HF936665H352344KM35OBIY':
+    elif current_plan_id == ' P-9NH796962B362113CM4C47UI': # Premium
         new_plan_name = 'Premium'
         new_cost = "9.99"
         Subscription.objects.filter(paypal_subscription_id=subID).update(subscription_plan=new_plan_name, subscription_cost=new_cost)
